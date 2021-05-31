@@ -1,0 +1,31 @@
+class ConnectionManager {
+    public $basename;
+    public $tablename;
+    public $dbPDO;
+
+    public function __construct() 
+    public function connectServer() -> return $db
+    protected function connectBase() -> return $pdoConnect
+}
+
+class EntryManager extends ConnectionManager {      -->require_once('model/ConnectionManager.php')
+
+    public function recordEntry() -> return $affectedLines;
+    public function updateEntry($id) 
+    public function getEntry($id) -> return $entry;
+    public function getEntries() -> return $entries;
+    public function deleteEntry($opId) 
+}
+
+
+////////////////////////////////////////////////////////////////
+//CALL
+
+    -> view/parts/php/article-project.php
+        $opManager = new EntryManager();
+        $projects = $opManager->getEntries();
+
+        while($data = $projects->fetch()) {
+            include('project.php');
+        }
+        $projects->closeCursor();

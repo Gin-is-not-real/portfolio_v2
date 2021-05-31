@@ -1,0 +1,90 @@
+/*MADIA QUERIES  */
+@media screen and (max-width: 800px) {
+    h1, h2, h3, p, .icon {
+        transform: scale(0.8) !important;
+    }
+    .img-skill {
+        width: 32px !important;
+        height: auto;
+    }
+	html {
+		font-size: 16px;
+	}
+    #presentation-section {
+        width: 60% !important;
+    }
+    #skills-section {
+        .section-content {
+            flex-direction: column wrap;
+            animation: surge-horizontal 5s ease forwards;
+        }
+    }
+    .projet-section {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+	html {
+		font-size: 13px;
+	}
+    .page-header {
+        height: 50px;
+    }
+    .ancre {
+        height: 50px;
+        margin-bottom: 50px;
+    }
+    .icon {
+        width: 32px !important;
+        height: auto;
+    }
+    #presentation-section {
+        width: 80% !important;
+    }
+    #skills-section {
+		margin: 0 auto;
+        width: 60% !important;
+        // max-width: 150px;
+	}
+    .projet-section {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+	html {
+		font-size: 12px;
+	}
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    .icon { 
+        width: 28px !important;
+        height: auto;
+    }
+
+    .page-header {
+        height: 40px;
+    }
+    .ancre {
+        height: 40px;
+        margin-bottom: 40px;
+    }
+
+    #presentation-section {
+        width: max-content;
+        min-width: 200px;
+    }
+    #skills-section {
+		margin: 0 auto;
+        width: 40%;
+	}
+
+    .projet-section {
+        width: 50%;
+    }
+}
