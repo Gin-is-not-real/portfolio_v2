@@ -1,3 +1,8 @@
+<?php 
+    if(session_id() == "") {
+        session_start();
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +19,14 @@
     </head> 
     
     <body>
-        <?php include('accounts.php'); ?>
+        <?php 
+            include('accounts.php'); 
+
+            if(isset($_SESSION['pseudo'])) {
+                include('admin-interface.php');
+            }
+        ?>
+
     </body>
 
     <script src="js/script.js"></script>

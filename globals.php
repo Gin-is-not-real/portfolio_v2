@@ -2,9 +2,9 @@
 $GLOBALS['servername'] = 'localhost';
 $GLOBALS['username'] = 'admin';
 $GLOBALS['password'] = 'admin';
-$GLOBALS['basename'] = 'log_gin_manager_2021';
-$GLOBALS['tablename'] = 'log_gin_manager_2021';
-$GLOBALS['log-tablename'] = 'log_gin_logs';
+$GLOBALS['basename'] = 'portfolio';
+$GLOBALS['tablename'] = 'projects';
+$GLOBALS['log-tablename'] = 'log_gin_users';
 
 $GLOBALS['sitename'] = "";
 $GLOBALS['homeview'] = "view/homeView.php";

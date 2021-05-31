@@ -35,7 +35,6 @@
                     echo '<a class="ancre" id="ancre-3"></a>' . '<br>';
                     include('parts/contacts.php');
                     echo '<hr>';
-
                 ?>
 
             </main>
@@ -43,7 +42,6 @@
 
         <hr>
         <?php include('parts/footer.php'); ?>
-        <!-- </div> -->
         
         <!-- <script src="./scripts/effects.js"></script>
         <script src="./scripts/events.js"></script>

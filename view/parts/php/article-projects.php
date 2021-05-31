@@ -10,7 +10,6 @@ require_once("../model/EntryManager.php");
     <div class="article-main" id="projets-main">
 
         <?php 
-            // listProjects();
             $opManager = new EntryManager();
             $projects = $opManager->getEntries();
 
