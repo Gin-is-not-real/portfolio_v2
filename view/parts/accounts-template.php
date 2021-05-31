@@ -31,4 +31,6 @@
 
     <script src="js/script.js"></script>
     <script src="js/accounts.js"></script>
+    <script src="js/admin_interface.js"></script>
+
 </html>

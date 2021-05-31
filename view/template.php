@@ -49,6 +49,7 @@
 
         <script src="../js/script.js"></script>
         <script src="../js/accounts.js"></script>
+    
     </body>
 
 </html>

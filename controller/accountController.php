@@ -28,13 +28,12 @@ function connection($pseudo, $pass) {
         }    
         else {    
             $_POST['log-error'] = 'Wrong password or pseudo';
-            goToAdminInterface();
         }
     }
     else { 
         $_POST['log-error'] = 'Wrong password or pseudo';
-        goToAdminInterface();
-    }       
+    }     
+    goToAdminInterface();
 }
 
 function registration($pseudo, $mail, $pass, $pass_repeat) {
@@ -43,16 +42,15 @@ function registration($pseudo, $mail, $pass, $pass_repeat) {
 
     if($pass != $pass_repeat) {
         $_POST['log-error'] = 'The two passwords must be identical';
-        goToAdminInterface();
     }
     elseif($data = $logsDb->fetch()) {
         $_POST['log-error'] = 'This pseudo is not available';
-        goToAdminInterface();
     }
     else {
         $accountManager->insertLogs($pseudo, $mail, $pass);
         $_SESSION['pseudo'] = $pseudo; 
     }
+    goToAdminInterface();
 
 }
 

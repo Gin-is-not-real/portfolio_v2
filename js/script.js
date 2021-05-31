@@ -46,6 +46,7 @@
                     - made disabled true for buttons of the other lines by call disableAllOthers(id)
     */
     function switchEditModeForLine(id, isOn) {
+
         let bool = true;
         if(isOn != false) {
             onEditId = id;
