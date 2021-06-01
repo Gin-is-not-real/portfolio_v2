@@ -106,3 +106,14 @@
         transform: translate(0);
     }
 }
+
+
+$shade-blur-final: 3px;
+@keyframes text-shade {
+    0% {
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.788), 1px 1px 2px rgba(255, 255, 255, 0.616);
+    }
+    100% {
+        text-shadow: 10px 10px $shade-blur-final rgba(255, 255, 255, 0.788), -10px -10px $shade-blur-final rgba(255, 255, 255, 0.616);
+    }
+}

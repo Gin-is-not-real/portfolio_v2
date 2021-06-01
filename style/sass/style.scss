@@ -1,2 +1,13 @@
 @import 'variables.scss', 'reset.scss', 'articles.scss', 'part-admin.scss', 'keyframes.scss', 'medias.scss';
 
+span {
+    font-size: 1.5em;
+    color: rgb(118, 102, 102);
+}
+
+section:not(#skills-section) {
+    @extend %shaded-box;
+}
+#skills-content {
+    @extend %shaded-box;
+}

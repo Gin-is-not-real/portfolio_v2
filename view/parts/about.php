@@ -14,7 +14,7 @@
 
         <section id="presentation-section">
             <header>
-                <h1>Nina Pariat</h1>
+                <h1><span>N</span>ina <span>P</span>ariat</h1>
                 <h3>Developpement Web front/back</h3>
             </header>
     
