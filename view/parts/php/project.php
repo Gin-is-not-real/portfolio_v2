@@ -14,8 +14,6 @@ $img_folder_url = 'http://localhost/FORM_PROJETS/form_projet4_Portfolio_v2/stati
                 <img class="img-screen ginfram-movingDemo-img vertical" src="<?= $img_folder_url . $data['project_image']; ?>">
             </figure>
         </div>
-
-
     </div>
     <footer>
         <nav class="nav-links">

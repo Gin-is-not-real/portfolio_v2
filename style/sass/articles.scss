@@ -20,7 +20,6 @@ $bg-color-1: #c2bdbdc7;
 
     display: flex;
 
-
     nav {
         width: 60%;
     }
@@ -39,7 +38,7 @@ $bg-color-1: #c2bdbdc7;
     }
     a {
         height: 60px;
-        color: black;
+        color: $a-color;
         // text-decoration: none;
         // background-image: url('../../static/img/bg/orange-elipt-350-344.png');
         // background-repeat: no-repeat;
@@ -50,12 +49,12 @@ $bg-color-1: #c2bdbdc7;
 .ancre {
     height: $height-header;
 }
+
 //////////////////////////////////////////////////////////////////
 /* ABOUT */ 
 #about-main-container {
     display: flex;
     flex-flow: row wrap;
-
     // background-image: url('../../static/img/essaiLogo.svg');
     // background-repeat: no-repeat;
     // background-size: contain;
@@ -65,14 +64,13 @@ $bg-color-1: #c2bdbdc7;
     // background-image: url('../../static/img/bg/elipt-350-350.png');
     // background-repeat: no-repeat;
     // background-size: 100% 100%;
-
     width: 50%;
     margin-left: 10%;
     margin-right: 5%;
     padding: 2%;
     box-sizing: border-box;
 
-    background: $bg-color-1;
+    background: $bg-pres-sec;
 
     animation: surge-horizontal 5s ease forwards;    //
 }
@@ -86,7 +84,7 @@ $bg-color-1: #c2bdbdc7;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        background-color: $bg-color-1;
+        background-color: $bg-sec-cont;
 
         // background: $deco-bg-elt;
         // background-image: url('../../static/img/bg/orange-elipt-350-344.png');
@@ -163,7 +161,8 @@ section {
     width: 25%;
     min-width: 200px;
 
-    background-color: #625d5d57;
+    background-color: $bg-proj-sec;
+
     // border-radius: 5%;
 
     &:nth-of-type(odd) {
@@ -214,14 +213,15 @@ section {
     .icon {
         width: 24px !important;
         height: 24px !important;
-
     }
 }
 
 %scalable-on-hover:hover {
         transform: scale(1.5);
 }
+.div-container-screen {
 
+}
 .figure-screen{
     width: 25vw;
     min-width: 100px;
@@ -235,18 +235,11 @@ section {
     border-radius: 1%;
     box-shadow: 0 1px 1px black;
     overflow: hidden;
-
-    .img-mask-screen {
-        height: auto;
-        width: 100%;
-        height: 100%;
-        background-size: 100% 100%;
-        position: absolute;
-        top: 0;
-    }
 }
 .img-screen {
-    width: 150%;
+    // width: 150%;
+    min-width: 150px;
+    min-height: 150px;
 
     height: auto;
     @extend %greyscaled;
@@ -272,5 +265,32 @@ section {
 }
 
 #contacts-main-container {
-    background-color: gray;
+    // background-color: gray;
+    // background: $bg-contacts-main;
+    display: flex;
+    justify-content: center;
+}
+#form-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+#message-section {
+    width: 45vw;
+    background: $bg-mess-sec;
+    padding: 2%;
+
+    div {
+        width: 50%;
+    }
+
+    textarea {
+        grid-row: 1/3;
+        grid-column: 2;
+    }
+
+    * {
+        margin: 2%;
+        text-align: center;
+    }
 }

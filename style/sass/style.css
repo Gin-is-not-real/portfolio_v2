@@ -61,7 +61,7 @@ nav, nav > ul {
 }
 #header-general a {
   height: 60px;
-  color: black;
+  color: rgba(0, 0, 0, 0.672);
   padding: 5%;
 }
 
@@ -156,7 +156,7 @@ section p {
   margin: 2%;
   width: 25%;
   min-width: 200px;
-  background-color: #625d5d57;
+  background-color: #c2bdbdc7;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -197,17 +197,10 @@ section p {
   box-shadow: 0 1px 1px black;
   overflow: hidden;
 }
-.figure-screen .img-mask-screen {
-  height: auto;
-  width: 100%;
-  height: 100%;
-  background-size: 100% 100%;
-  position: absolute;
-  top: 0;
-}
 
 .img-screen {
-  width: 150%;
+  min-width: 150px;
+  min-height: 150px;
   height: auto;
 }
 .img-screen:nth-of-type(odd) {
@@ -229,7 +222,31 @@ section p {
   }
 }
 #contacts-main-container {
-  background-color: gray;
+  display: flex;
+  justify-content: center;
+}
+
+#form-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#message-section {
+  width: 45vw;
+  background: #c2bdbdc7;
+  padding: 2%;
+}
+#message-section div {
+  width: 50%;
+}
+#message-section textarea {
+  grid-row: 1/3;
+  grid-column: 2;
+}
+#message-section * {
+  margin: 2%;
+  text-align: center;
 }
 
 @keyframes upopacity {
@@ -335,6 +352,34 @@ section p {
   }
 }
 /*MADIA QUERIES  */
+@media screen and (min-width: 800px) {
+  h1, h2, h3, p, .icon {
+    transform: scale(0.8) !important;
+  }
+
+  .img-skill {
+    width: 32px !important;
+    height: auto;
+  }
+
+  html {
+    font-size: 16px;
+  }
+
+  #presentation-section {
+    width: 60% !important;
+  }
+
+  #skills-section .section-content {
+    flex-direction: column wrap;
+    animation: surge-horizontal 5s ease forwards;
+  }
+
+  .projet-section {
+    width: 30vw;
+    margin: 2% auto;
+  }
+}
 @media screen and (max-width: 800px) {
   h1, h2, h3, p, .icon {
     transform: scale(0.8) !important;

@@ -1,4 +1,30 @@
 /*MADIA QUERIES  */
+@media screen and (min-width: 800px) {
+    h1, h2, h3, p, .icon {
+        transform: scale(0.8) !important;
+    }
+    .img-skill {
+        width: 32px !important;
+        height: auto;
+    }
+	html {
+		font-size: 16px;
+	}
+    #presentation-section {
+        width: 60% !important;
+    }
+    #skills-section {
+        .section-content {
+            flex-direction: column wrap;
+            animation: surge-horizontal 5s ease forwards;
+        }
+    }
+    .projet-section {
+        width: 30vw;
+        margin: 2% auto;
+    }
+}
+
 @media screen and (max-width: 800px) {
     h1, h2, h3, p, .icon {
         transform: scale(0.8) !important;

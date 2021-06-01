@@ -8,17 +8,17 @@ if(session_id() == '') {
 try {
     if(!isset($_GET['action'])) {
         if(isset($_GET['session-state']) AND $_GET['session-state'] == 'init-session') {
-            echo session_id() .' ' . $_SESSION['pseudo'];
-
+            
             if(!isset($_SESSION['pseudo'])) {
                 if(session_id() !== '') {
                     unset($_SESSION['pseudo']);
                     session_destroy();
                 }
             }
+            echo session_id() .' ' . $_SESSION['pseudo'];
             //si il y une session ouverte, on la detruit
         }
-        goToAdminInterface();
+        // goToAdminInterface();
     }
     else {
         if($_GET['action'] == 'connection') {

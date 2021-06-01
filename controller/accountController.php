@@ -1,6 +1,9 @@
 <?php
 require_once('model/AccountManager.php');
 require_once('controller/frontController.php');
+
+
+
 // CONTROLLER
 if(session_id() == '') {
     session_start();
@@ -24,7 +27,8 @@ function connection($pseudo, $pass) {
 
     if($data = $logsDb->fetch()) {
         if($pass == $data['pass']) {
-            $_SESSION['pseudo'] = $pseudo;
+            $_SESSION['pseudo'] = htmlspecialchars($pseudo);
+            setcookie('session', htmlspecialchars($pseudo), time() + 1);
         }    
         else {    
             $_POST['log-error'] = 'Wrong password or pseudo';
