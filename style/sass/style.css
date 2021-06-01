@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap");
 @font-face {
   font-family: "bradhitc";
   src: url("../../static/fonts/bradhitc/bradhitc.eot");
@@ -9,8 +14,17 @@
 html {
   overflow-y: scroll;
   scroll-behavior: smooth;
-  font-family: "bradhitc";
+  font-family: "Days One", sans-serif;
   font-size: 20px;
+}
+
+h1, h2, h3 {
+  font-family: "Krona One", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2em;
 }
 
 body, body * {
@@ -24,9 +38,17 @@ nav, nav > ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .icon {
   width: 34px !important;
   height: 34px !important;
+}
+
+.container-ancre {
+  height: 50px;
 }
 
 #header-general {
@@ -36,6 +58,7 @@ nav, nav > ul {
   top: 0;
   z-index: 1;
   display: flex;
+  justify-content: space-between;
 }
 #header-general figure {
   width: 50px;
@@ -55,19 +78,26 @@ nav, nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 #header-general li {
   font-size: 0.6em;
   width: 30%;
+  text-align: center;
+  height: min-content;
 }
 #header-general a {
   height: 60px;
   color: rgba(0, 0, 0, 0.672);
   padding: 5%;
 }
-
-.ancre {
-  height: 50px;
+#header-general div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header-general div a {
+  height: min-content;
 }
 
 /* ABOUT */
@@ -75,7 +105,36 @@ nav, nav > ul {
   display: flex;
   flex-flow: row wrap;
 }
+#about-main-container figure {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#about-main-container figure img {
+  width: 200%;
+  height: 200%;
+  animation: 80s ease-in-out infinite alternate moving-logo;
+  filter: grayscale(100%);
+  transition: grayscale 10s ease;
+}
 
+@keyframes moving-logo {
+  0% {
+    transform: translate(-20%, -30%);
+  }
+  30% {
+    transform: translate(-25%, -10%) scale(0.8);
+  }
+  50% {
+    transform: translate(-10%, -20%) scale(0.5);
+  }
+  80% {
+    transform: translate(-5%, -20%);
+  }
+  100% {
+    transform: translate(-15%, -25%);
+  }
+}
 #presentation-section {
   width: 50%;
   margin-left: 10%;
@@ -273,6 +332,7 @@ section p {
 #footer-general nav {
   display: flex;
   justify-content: center;
+  margin: 5%;
 }
 
 @keyframes upopacity {
@@ -379,10 +439,6 @@ section p {
 }
 /*MADIA QUERIES  */
 @media screen and (min-width: 800px) {
-  h1, h2, h3, p, .icon {
-    transform: scale(0.8) !important;
-  }
-
   .img-skill {
     width: 32px !important;
     height: auto;

@@ -8,6 +8,9 @@
 
     <!-- PRESENTATION -->
     <div class="div-article-main" id="about-main-container">
+        <figure>
+            <img src="../static/img/essaiLogo.svg" alt="">
+        </figure>
 
         <section id="presentation-section">
             <header>
@@ -16,6 +19,7 @@
             </header>
     
             <div class="section-content" id="presentation-content">
+
                     <p>
                         J'ai commencé à apprendre la programmation il y a plus d'un an, d'abors par curiosité , qui est vite devenu passion, principalement lorsque je suis rentrée dans les concepts de fonctions, de boucles et surtout de la programmation Orientée objet en m'initiant sur JAVA.
                     </p>
@@ -25,7 +29,6 @@
                     <p>
                         J'ai principalement pratiqué sur Javascript et JAVA, et je suis rentrée en formation en mars developpeur web front/back chez Online Forma Pro. 
                     </p>
-
             </div>
         </section>
     

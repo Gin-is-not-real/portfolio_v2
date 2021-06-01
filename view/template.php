@@ -24,15 +24,15 @@
                 <?php 
                     $img_folder_url = 'http://localhost/FORM_PROJETS/form_projet4_Portfolio_v2/static/img/';
 
-                    echo '<a class="ancre" id="ancre-1"></a>' . '<br>';
+                    echo '<div class="container-ancre" ><a class="ancre" id="ancre-1"></a></div>' . '<br>';
                     include('parts/about.php');
                     echo '<hr>';
 
-                    echo '<a class="ancre" id="ancre-2"></a>' . '<br>';
+                    echo '<div class="container-ancre"><a class="ancre" id="ancre-2"></a></div>' . '<br>';
                     include('parts/php/article-projects.php');
                     echo '<hr>';
 
-                    echo '<a class="ancre" id="ancre-3"></a>' . '<br>';
+                    echo '<div class="container-ancre"><a class="ancre" id="ancre-3"></a></div>' . '<br>';
                     include('parts/contacts.php');
                     echo '<hr>';
                 ?>

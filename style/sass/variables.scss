@@ -3,9 +3,19 @@ $bg-grey: #c2bdbdc7;
 $bg-1: $bg-grey;
 $color-1: rgba(0, 0, 0, 0.672);
 
+$bg-grad-1: linear-gradient(white, red, black);
+$bg-grad-2: linear-gradient(black, #00ffe7, black);
+$bg-grad-3: linear-gradient(black, #6c0661, black);
+
+$bg-body: none;
+$bg-about: black;
+
 $a-color: $color-1;
 $bg-sec-cont: $bg-1;
 $bg-pres-sec: $bg-1;
 $bg-proj-sec: $bg-1;
 $bg-contacts-main: $bg-1;
 $bg-mess-sec: $bg-1;
+
+$height-header: 50px; 
+$bg-color-1: #c2bdbdc7;

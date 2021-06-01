@@ -5,13 +5,34 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
 
 html {
     overflow-y: scroll;
     scroll-behavior: smooth;
-    font-family: "bradhitc";
+    // font-family: "bradhitc";
+    // font-family: 'Krona One', sans-serif;
+    // font-family: 'Sigmar One', cursive;
+    font-family: 'Days One', sans-serif;
+    // font-family: 'Nunito', sans-serif;
+    // font-family: 'Baloo Tammudu 2', cursive;//pas mal
     font-size: 20px;
 }
+
+h1, h2, h3 {
+    font-family: 'Krona One', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+
 
 body, body * {
     margin: 0;
@@ -29,9 +50,14 @@ nav, nav>ul {
     flex-direction: row;
     list-style: none;
 }
-
+a {
+    text-decoration: none;
+}
 .icon {
     width: 34px !important;
     height: 34px !important;
 }
-
+.container-ancre {
+    height: $height-header;
+    // background: red;
+}
