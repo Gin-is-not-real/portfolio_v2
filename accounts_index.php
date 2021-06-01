@@ -1,16 +1,22 @@
 <?php
 require('controller/accountController.php');
+require_once('model/EntryManager.php');
+
 if(session_id() == '') {
     session_start();
 }
 try {
     if(!isset($_GET['action'])) {
         if(isset($_GET['session-state']) AND $_GET['session-state'] == 'init-session') {
-            //si il y une session ouverte, on la detruit
-            if(session_id() !== '') {
-                unset($_SESSION['pseudo']);
-                session_destroy();
+            echo session_id() .' ' . $_SESSION['pseudo'];
+
+            if(!isset($_SESSION['pseudo'])) {
+                if(session_id() !== '') {
+                    unset($_SESSION['pseudo']);
+                    session_destroy();
+                }
             }
+            //si il y une session ouverte, on la detruit
         }
         goToAdminInterface();
     }
@@ -36,9 +42,25 @@ try {
         elseif($_GET['action'] == 'deconnection') {
             deconnection();
         } 
+
+        elseif($_GET['action'] == 'add-project') {
+            // -> on recuperer les données
+            $opManager = new EntryManager();
+            $affectedLines = $opManager->recordEntry();
+        }
+
+        elseif($_GET['action'] == 'suppr-project') {
+            $opManager = new EntryManager();
+            $affectedLines = $opManager->deleteEntry($_GET['id']);
+        }
+
+        elseif($_GET['action'] == 'edit-project') {
+            $opManager = new EntryManager();
+            $affectedLines = $opManager->updateEntry($_GET['id']);
+        }
     }
 
-    // goToAdminInterface();
+    goToAdminInterface();
 
 } catch(Exception $e) {
     echo 'Erreur: ' . $e->getMessage();

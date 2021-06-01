@@ -1,55 +1,66 @@
 <?php 
     require_once("model/EntryManager.php");
-
 ?>
-<div>Hello <?= $_SESSION['pseudo']; ?></div>
 
 <div class="article-main" id="admin-main">
 
+<!-- AJOUTER -->
+    <div id="container-form-add">
+        <header>
+            <h3>ajouter un projet</h3>
+        </header>
+        <form class="form-list" id="form-add" action="accounts_index.php?action=add-project" method="post">
+            <!-- <label for="project_title">TITRE</label> -->
+            <input type="text" name="project_title" placeholder="Titre" maxlength="50" required>
+            <!-- <label for="project_describe">DESCRIPTION</label> -->
+            <input type="text" name="project_describe" placeholder="Description" maxlength="255" required/>
+            <!-- <label for="project_image">URL IMAGE</label> -->
+            <input type="text" name="project_image" placeholder="Image url" maxlength="255"/>
+            <!-- <label for="project_github">LIEN GITHUB</label> -->
+            <input type="text" name="project_github" placeholder="Lien Github"/>
+            <!-- <label for="project_link">LIEN PROJET</label> -->
+            <input type="text" name="project_link" placeholder="Lien Projet"/>
+
+
+            <input type="submit" id="sub-add" name="sub-add" value="sub-add" hidden/>
+            <input type="button" id="btn-add" name="btn-add" value="Enregistrer" />
+
+        </form>
+        <!-- <input type="button" value="add" /> -->
+    </div>
+
+
+<!-- LISTE -->
 <?php 
             $opManager = new EntryManager();
             $projects = $opManager->getEntries();
-
             while($data = $projects->fetch()) {
-
 ?>
             <div id="container-form">
-                <form class="form-list" id="form-line-<?=$data['project_id']; ?>" action="index.php?action=edit-entry&id=<?=$data['project_id']; ?>" method="post">
-
+                <form class="form-list" id="form-line-<?=$data['project_id']; ?>" action="accounts_index.php?action=edit-project&amp;id=<?= $data['project_id']; ?>" method="post">
                     <input type="text" name="project_title" placeholder="Titre" maxlength="50" value="<?= $data['project_title']; ?>" disabled/>
                     <input type="text" name="project_describe" placeholder="Description" maxlength="255" value="<?= $data['project_describe']; ?>" disabled/>
                     <input type="text" name="project_image" placeholder="Image url" maxlength="255" value="<?= $data['project_image']; ?>" disabled/>
                     <input type="text" name="project_github" placeholder="Lien Github" value="<?= $data['project_github']; ?>" disabled/>
                     <input type="text" name="project_link" placeholder="Lien Projet" value="<?= $data['project_link']; ?>" disabled/>
-                    <input type="text" id="sum-message" name="sum_message" hidden/>
-                    <input type="submit" id="sub-edit-<?= $data['project_id'] ?>"  name="sub-valid" value="valider"  hidden/>
 
+                    <input type="text" id="sum-message" name="sum_message" hidden/>
+
+                    <input type="button" id="sub-edit-<?= $data['project_id'] ?>"  name="sub-edit" value="valider"  hidden/>
 
                 <div id="div-actions">
-                            <!-- SUB CONFIRM EDIT hidden-->
-                            <!-- confirm button of the edition mode, appears when the line is being edited, after a clic on the sub-edit button  -->
-                            <input type="submit" class="round-btn big green sub-edit-operation appear-on-edit" id="sub-confirm-edit-<?= $data['project_id'] ?>" name="sub-edit-operation" value="confirm" hidden />
-                        </form>
+                    <form action="accounts_index.php?action=edit-project&amp;id=<?= $data['project_id'] ?>" method="post">
 
-                            <!-- SUB EDIT MODE-->
-                            <!-- make line's inputs availables, make disappear sub-edit- and sub-suppr-op buttons and appears buttons sub-confirm-edit and sub-cancel-edit -->
-                            <input type="button" class="round-btn little neutral sub-edit disappear-on-edit" id="sub-edit-<?= $data['project_id']; ?>" name="sub-able-edit" value="edit" onclick="switchEditModeForLine(<?= $data['project_id']; ?>, true)"/>
+                        <input type="button" class="round-btn little red btn-edit disappear-on-edit" id="btn-edit-<?= $data['project_id']; ?>" name="btn-edit" value="edit" />
 
-                            <!-- SUB CANCEL EDIT hidden-->
-                            <!-- visible only if line is being edited -->
-                            <input type="submit" class="round-btn big red sub-cancel-edit appear-on-edit" id="sub-cancel-edit-<?= $data['project_id']; ?>" name="sub-cancel-edit" onclick="switchEditModeForLine(<?= $data['project_id']; ?>, false)" value="cancel" hidden />
+                        <input type="button" class="round-btn little red" id="btn-cancel-edit-<?= $data['project_id']; ?>" name="btn-cancel" value="annuler" hidden/>
+                    </form>
 
-                            <!-- SUB SUPPR OP -->
-                            <!-- made appear a popup who ask confirm for delete the line -->
-                            <!-- <input type="submit" class="round-btn little red sub-suppr disappear-on-edit" id="suppr-<?= $data['project_id'] ?>" name="sub-suppr-op" value="X" onclick="return displayHiddePopupConfirm('You will delete the entry n° ' + <?= $data['project_id']; ?> + ' ?', '#sub-suppr-' + <?= $data['project_id']; ?>)" /> -->
-                            <input type="submit" class="round-btn little red sub-suppr disappear-on-edit" id="suppr-<?= $data['id'] ?>" name="sub-suppr-op" value="X" onclick="return displayHiddePopupConfirm('You will delete the entry n° ' + <?= $data['project_id']; ?> + ' ?', '#sub-suppr-' + <?= $data['project_id']; ?>)" />
+                    <form action="accounts_index.php?action=suppr-project&amp;id=<?= $data['project_id'] ?>" method="post">
+                        <input type="submit" class="round-btn little red sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['project_id']; ?>" name="sub-suppr" value="X" hidden />
 
-
-                        <form action="index.php?action=suppr-operation&amp;id=<?= $data['project_id'] ?>" method="post">
-                                <!-- SUB SUPPR ID hidden-->
-                                <!-- hidden. Is activated by clic on the "yes" button of the confirm popup-->
-                                <input type="submit" class="round-btn little red sub-suppr disappear-on-edit" id="sub-suppr-<?= $data['project_id']; ?>" name="sub-suppr-op" value="X" hidden />
-                        </form>
+                        <input type="button" class="round-btn little red sub-suppr disappear-on-edit" id="btn-suppr-<?= $data['project_id']; ?>" name="btn-suppr" value="X"  />
+                    </form>
                 </div>
             </form>
         </div>
