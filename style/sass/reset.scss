@@ -8,11 +8,12 @@
 
 html {
     overflow-y: scroll;
+    scroll-behavior: smooth;
     font-family: "bradhitc";
     font-size: 20px;
 }
 
-body * {
+body, body * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;

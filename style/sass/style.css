@@ -8,11 +8,12 @@
 }
 html {
   overflow-y: scroll;
+  scroll-behavior: smooth;
   font-family: "bradhitc";
   font-size: 20px;
 }
 
-body * {
+body, body * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -185,6 +186,10 @@ section p {
   height: 24px !important;
 }
 
+#contacts-main-container figure:hover {
+  transform: scale(1.5);
+}
+
 .figure-screen {
   width: 25vw;
   min-width: 100px;
@@ -225,28 +230,49 @@ section p {
   display: flex;
   justify-content: center;
 }
+#contacts-main-container header {
+  margin-bottom: 2%;
+}
+#contacts-main-container figure {
+  display: flex;
+  justify-content: center;
+}
 
-#form-contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+#form-contact input, #form-contact textarea {
+  margin: 2%;
+  width: 100%;
+  max-width: 280px;
+  align-self: center;
+}
+#form-contact #contact-form-inputs {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+#form-contact #contact-form-inputs div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 #message-section {
-  width: 45vw;
+  width: 60vw;
   background: #c2bdbdc7;
   padding: 2%;
-}
-#message-section div {
-  width: 50%;
-}
-#message-section textarea {
-  grid-row: 1/3;
-  grid-column: 2;
+  margin-bottom: 2%;
 }
 #message-section * {
-  margin: 2%;
   text-align: center;
+}
+
+#footer-general {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+#footer-general nav {
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes upopacity {

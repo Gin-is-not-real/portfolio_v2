@@ -42,18 +42,23 @@
             <div class="section-content">
                 <form action="" id="form-contact">
                     
-                    <div class="contact-input" id="contact-inputs">
-                        <input type="text" placeholder="votre nom">
-                        <input type="email" placeholder="votre email">
-                    </div>
-            
-                    <div class="contact-input" id="contact-textarea">
+                    <div id="contact-form-inputs">
+                        <div id="contact-inputs">
+                            <!-- <label for="inp-name">NOM</label> -->
+                            <input id="inp-name" type="text" placeholder="votre nom">
+                            <!-- <label for="inp-name">MAIL</label> -->
+                            <input id="inp-email" type="email" placeholder="votre email">
+                        </div>
+
                         <textarea placeholder="votre message"></textarea>
                     </div>
+
+            
+
             
                     <div class="contact-input" id="contact-send">
                         <figure>
-                            <img  class="icon hoverable" id="btn-send" src="<?= $img_folder_url; ?>icons/others/icon-mail-round.gif" width="64px" alt="">
+                            <img  class="icon " id="btn-send" src="<?= $img_folder_url; ?>icons/others/icon-mail-round.gif" width="64px" alt="">
                         </figure>
                         <!-- <input id="btn-send" type="submit" value="SEND"> -->
                     </div>
