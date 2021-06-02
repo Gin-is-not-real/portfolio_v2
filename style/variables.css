@@ -3,8 +3,7 @@ html {
     --bgcolor-body: rgb(66,64,75);
     --bgcolor-main: rgb(81, 76, 115, 69%);
     --bgcolor-1: #42404bbd;
-    --radius: 10px;
-
+    --radius: 10px0
     /* INPUTS */
     --bgbtn-green: rgb(49, 140, 49);
     --bgbtn-green-hover: rgb(20, 104, 20);

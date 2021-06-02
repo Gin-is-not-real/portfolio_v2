@@ -15,8 +15,8 @@
     }
     #skills-section {
         .section-content {
-            flex-direction: column wrap;
-            animation: surge-horizontal 5s ease forwards;
+            // flex-direction: column wrap;
+            animation: surge-vertical 5s ease forwards;
         }
     }
     .projet-section {
@@ -42,7 +42,7 @@
     #skills-section {
         .section-content {
             flex-direction: column wrap;
-            animation: surge-horizontal 5s ease forwards;
+            animation: surge-vertical 5s ease forwards;
         }
     }
     .projet-section {
@@ -89,7 +89,7 @@
         font-size: 1.4em;
     }
     .icon { 
-        width: 28px !important;
+        width: 36px !important;
         height: auto;
     }
 

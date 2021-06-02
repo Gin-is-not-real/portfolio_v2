@@ -1,6 +1,9 @@
 $bg-grey: #c2bdbdc7;
+$bg-blugrey: #49576d44;
 
 $bg-1: $bg-grey;
+$bg-1: $bg-blugrey;
+
 $color-1: rgba(0, 0, 0, 0.672);
 
 $bg-grad-1: linear-gradient(white, red, black);
@@ -21,7 +24,28 @@ $height-header: 50px;
 $bg-color-1: #c2bdbdc7;
 
 $box-shadow-1: 3px 3px 10px rgba(70, 70, 70, 0.309);
+$box-shadow-1: 4px 3px 10px rgba(70, 70, 70, 0.597);
+
 
 %shaded-box {
     box-shadow: $box-shadow-1;
+    background: #49576d44;
+}
+
+%shaded-text {
+    animation: text-shade 2s cubic-bezier(0.075, 0.82, 0.165, 1) infinite alternate;
+}
+
+%greyscaled {
+    filter: grayscale(70%);
+    &:hover {
+        filter: grayscale(0%);
+        transition: all 0.8s ease-in-out;
+    }
+}
+
+%scalable-on-hover {
+    &:hover {
+        transform: scale(1.5);
+    }
 }

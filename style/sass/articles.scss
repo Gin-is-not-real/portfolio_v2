@@ -43,10 +43,8 @@
             border-bottom: 1px solid black;
             text-orientation: sideways;
 
-            // animation: text-shade 5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
-            animation: text-shade 2s cubic-bezier(0.075, 0.82, 0.165, 1) infinite alternate;
+            @extend %shaded-text;
 
-            // text-shadow: 1px 1px 1px white, 1px 1px 1px black;
         }
         &:active {
             // animation: text-shade 5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite ;
@@ -62,8 +60,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 5%;
+
         a {
             height: min-content;
+            &:hover {
+                @extend %shaded-text;
+            }
         }
     }
 }
@@ -73,7 +76,7 @@
 /* ABOUT */ 
 #about-main-container {
     display: flex;
-    flex-flow: row wrap;
+    // flex-flow: row wrap;
 
     figure {
         position: absolute;
@@ -113,38 +116,31 @@
 }
 
 #presentation-section {
-    // background-image: url('../../static/img/bg/elipt-350-350.png');
-    // background-repeat: no-repeat;
-    // background-size: 100% 100%;
-    width: 50%;
+    width: 45%;
     margin-left: 10%;
     margin-right: 5%;
+    margin-top: -2%;
+    margin-bottom: 5%;
     padding: 2%;
     box-sizing: border-box;
 
     background: $bg-pres-sec;
-
-    animation: surge-horizontal 5s ease forwards;    //
-
-
+    animation: surge-horizontal 5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;    //
 }
 
 #skills-section {
     width: 30%;
+    max-width: 200px;
+    max-height: 200px;
+
     box-sizing: border-box;
 
     .section-content {
-        // margin: 2%;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
         background-color: $bg-sec-cont;
 
-        // background: $deco-bg-elt;
-        // background-image: url('../../static/img/bg/orange-elipt-350-344.png');
-        // background-size: 100% 100%;
-        // background-repeat: no-repeat;
-        // background-position: center;
         padding: 5%;
         animation: surge-vertical 5s ease forwards;
     }
@@ -196,14 +192,6 @@ section {
 }
 //////////////////////////////////////////
 // 
-%greyscaled {
-    filter: grayscale(70%);
-    &:hover {
-        filter: grayscale(0%);
-        transition: all 0.8s ease-in-out;
-    }
-}
-
 #projets-main {
     display: flex;
     flex-flow: row wrap;
@@ -217,8 +205,6 @@ section {
     min-width: 200px;
 
     background-color: $bg-proj-sec;
-
-    // @extend %shaded-box;
 
     &:nth-of-type(odd) {
         header {
@@ -252,31 +238,22 @@ section {
             width: 50px;
             height: 40px;
             margin: 5%;
-            // background-image: url('../../static/img/bg/icon-mask-100-100.png');
-            // background-repeat: no-repeat;
-            // background-size: 100% 100%;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            &:hover {
-                transform: scale(1.5);
-            }
+
+            @extend %scalable-on-hover;
+                // transform: scale(1.5);
         }
     }
     .icon {
-        width: 24px !important;
-        height: 24px !important;
+        // width: 32px !important;
+        // height: 32px !important;
     }
 }
 
-%scalable-on-hover:hover {
-        transform: scale(1.5);
-}
-.div-container-screen {
-
-}
 .figure-screen{
     width: 25vw;
     min-width: 100px;
@@ -370,14 +347,20 @@ section {
 
 #footer-general {
     text-align: center;
-
     display: flex;
     flex-direction: column;
+}
 
-    nav {
-        display: flex;
-        justify-content: center;
-        margin: 5%;
+.nav-socials {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+
+    ul {
+        width: 50%;
+        justify-content: space-evenly;
     }
-    
+    li {
+        @extend %scalable-on-hover;
+    }
 }

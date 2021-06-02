@@ -1,11 +1,11 @@
 <footer class="page-footer" id="footer-general">
-    <nav>
+    <nav class="nav-socials">
         <ul>
             <li>
-                <img class="icon hoverable" src="<?= $img_folder_url; ?>icons/skills-color/icon-github-64.png" alt="icone git hub">
+                <img class="icon" src="<?= $img_folder_url; ?>icons/skills-color/icon-github-64.png" alt="icone git hub">
             </li>
             <li>
-                <img class="icon hoverable" src="<?= $img_folder_url; ?>icons/others/icon-linkedin-64.png" alt="icone linkedin">
+                <img class="icon" src="<?= $img_folder_url; ?>icons/others/icon-linkedin-64.png" alt="icone linkedin">
             </li>
         </ul>
     </nav>

@@ -19,12 +19,21 @@
             </header>
     
             <div class="section-content" id="presentation-content">
-
+            <nav class="nav-socials">
+                    <ul>
+                        <li>
+                            <img class="icon hoverable" src="<?= $img_folder_url; ?>icons/skills-color/icon-github-64.png" alt="icone git hub">
+                        </li>
+                        <li>
+                            <img class="icon hoverable" src="<?= $img_folder_url; ?>icons/others/icon-linkedin-64.png" alt="icone linkedin">
+                        </li>
+                    </ul>
+                </nav>
                     <p>
-                        J'ai commencé à apprendre la programmation il y a plus d'un an, d'abors par curiosité , qui est vite devenu passion, principalement lorsque je suis rentrée dans les concepts de fonctions, de boucles et surtout de la programmation Orientée objet en m'initiant sur JAVA.
+                        J'ai commencé à apprendre la programmation en 2018, d'abords par curiosité , qui est vite devenu passion, principalement lorsque je suis rentrée dans les concepts de fonctions, de boucles et surtout de la programmation Orientée objet en m'initiant sur JAVA.
                     </p>
                     <p>
-                        Je suis passionnée de synthése sonore, et curieuse de tout, et j'aime explorer divers domaines en codant, même à mon petit niveau, mes propres petits programmes de synthéses ou d'analyses, comme des synthétiseurs, spectromètres, oscilloscopes.
+                        Je suis passionnée de synthèse sonore, et curieuse de tout, et j'aime explorer divers domaines en codant, même à mon petit niveau, mes propres petits programmes de synthèses ou d'analyses, comme des synthétiseurs, spectromètres, oscilloscopes.
                     </p>
                     <p>
                         J'ai principalement pratiqué sur Javascript et JAVA, et je suis rentrée en formation en mars developpeur web front/back chez Online Forma Pro. 
@@ -47,7 +56,6 @@
                 <img class="img-skill icon" src="<?= $img_folder_url; ?>icons/skills-color/icon-vscode-64.png" alt="icone vscode">
                 <img class="img-skill icon" src="<?= $img_folder_url; ?>icons/skills-color/icon-eclipse-64.png" alt="icone eclipse">
                 <img class="img-skill icon" src="<?= $img_folder_url; ?>icons/skills-color/icon-wordpress-64.png" alt="icone wordpress">
-
             </div>
         </section>
     </div>

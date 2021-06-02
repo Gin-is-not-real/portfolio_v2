@@ -11,3 +11,13 @@ section:not(#skills-section) {
 #skills-content {
     @extend %shaded-box;
 }
+#header-general {
+    background: $bg-1;
+    // background-image: linear-gradient(rgba(128, 128, 128, 0.618), transparent) ;
+
+    &:hover {
+        background-image: linear-gradient(rgba(128, 128, 128, 0.618), transparent) ;
+    }
+}
+
+
