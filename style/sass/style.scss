@@ -5,9 +5,10 @@ span {
     color: rgb(118, 102, 102);
 }
 
-section:not(#skills-section) {
+article section:not(#skills-section, #main-accounts section) {
     @extend %shaded-box;
 }
+
 #skills-content {
     @extend %shaded-box;
 }

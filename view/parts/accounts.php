@@ -10,55 +10,55 @@ $btn_deconnect = '<a href="accounts_index.php?action=deconnection"><input class=
 $btns = array();
 ?>
 
-<div id="notice">
-    <div>
-        <?php 
-        if(isset($_GET['notice'])) {
-
-        }
-        else {
-            if(!isset($_SESSION['pseudo'])) {
-                $_POST['log-notice'] = 'You must log in or register to access the application';
-                array_push($btns, $btn_connect, $btn_register);
+<div id="main-login">
+    <header>
+        <div id="div-notice">
+            <?php 
+            if(isset($_GET['notice'])) {
+    
             }
             else {
-                $_POST['notification'] = "you have been successfully logged in as <strong>" . $_SESSION['pseudo'] . "</strong>.";
+                if(!isset($_SESSION['pseudo'])) {
+                    $_POST['log-notice'] = 'You must log in or register to access the application';
+                    array_push($btns, $btn_connect, $btn_register);
+                }
+                else {
+                    $_POST['notification'] = "you have been successfully logged in as <strong>" . $_SESSION['pseudo'] . "</strong>.";
+                }
             }
-        }
-
-        if(isset($_POST['log-notice'])) {
-             echo $_POST['log-notice'] . '</br>';
-        }
-?>
-    </div>
-
-    <div id="div-error">
-        <?php
-            if(isset($_POST['log-error'])) {
-                echo  $_POST['log-error'] .'</br>';
+    
+            if(isset($_POST['log-notice'])) {
+                 echo $_POST['log-notice'] . '</br>';
             }
-        ?>
-    </div>
-
-    <div id="div-btns">
-        <?php
-            foreach($btns as $input) {
-                echo $input;
-            }
-        ?>
-    </div>
-
-    <div id="div-notif">
-        <?php
-            if(isset($_POST['notification'])) {
-                echo $_POST['notification'] .'</br>';
-            }
-            else {
-                echo 'you can also continue as a visitor and return to home ' .'</br>' .  $btn_home;
-            }
-        ?>
-    </div>
-
+    ?>
+        </div>
+    
+        <div id="div-error">
+            <?php
+                if(isset($_POST['log-error'])) {
+                    echo  $_POST['log-error'] .'</br>';
+                }
+            ?>
+        </div>
+    
+        <div id="div-btns">
+            <?php
+                foreach($btns as $input) {
+                    echo $input;
+                }
+            ?>
+        </div>
+    
+        <div id="div-notif">
+            <?php
+                if(isset($_POST['notification'])) {
+                    echo $_POST['notification'] .'</br>';
+                }
+                else {
+                    echo 'you can also continue as a visitor and return to home ' .'</br>' .  $btn_home;
+                }
+            ?>
+        </div>
 
 <!-- LOGOUT -->
     <div id="div-logout">
@@ -77,17 +77,17 @@ $btns = array();
             ?>
         </div>
     </div>
+</header>
 
 
-<main id="main-accounts" >
+<div id="main-accounts">
 <!-- CONNECTION -->
     <section id="sec-connection" class="centred-section accounts">
-        <form class="form-accounts" action="accounts_index.php?action=connection" method="post">
-            <section>
-                <header>
-                    <h3>CONNECTION</h3>
-                </header>
+        <header>
+            <h3>CONNECTION</h3>
+        </header>
 
+        <form class="form-accounts" action="accounts_index.php?action=connection" method="post">
                 <table class="table-form-accounts">
                     <tr>
                         <th>Pseudo</th>
@@ -102,8 +102,6 @@ $btns = array();
                         </td>
                     </tr>
                 </table>
-            </section>
-            <div>
                 <input class="round-btn super green" type="submit" value="LOG IN">
             </div>
         </form>
@@ -111,11 +109,13 @@ $btns = array();
 
 <!-- REGISTRATION -->
     <section id="sec-registration" class="centred-section accounts">
+        <header>
+            <h3>REGISTRATION</h3>
+        </header>
+
         <form class="form-accounts" id="form-registration" action="accounts_index.php?action=registration" method="post">
         <section>
-            <header>
-                <h3>REGISTRATION</h3>
-            </header>
+
             <table class="table-form-accounts">
                 <tr>
                     <th>Pseudo</th>

@@ -1,0 +1,106 @@
+* {
+    // border: 1px solid black;
+}
+#main-login {
+    width: 60%;
+    margin: 2% auto;
+
+    border-radius: 1%;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    background: $bg-main-login;
+    @extend %shaded-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    * {
+        // margin: 2%;
+        // padding: 2%;
+        // border: 1px solid grey;
+        text-align: center;
+    }
+
+    >header {
+        padding: 2%;
+        margin: 0 auto 5% auto;
+        background: #4b475b38;
+    }
+
+    form {
+        // display: none;
+        width: 100%;
+        padding: 2%;
+        margin: 2% auto;
+
+        input {
+            width: 80%;
+        }
+
+
+
+        tr {
+            margin: 2% auto;
+        }
+    }
+
+    >div {
+        width: 100%;
+        padding: 2%;
+        margin: 0 auto;
+    }
+
+    input, h3 {
+        margin: 2%;
+    }
+
+    input[type=submit], input[type=button] {
+        margin: 5% auto;
+        padding: 2%;
+    }
+}
+
+
+
+#div-notice {
+
+}
+
+#div-error {
+    color: rgb(73, 25, 35);
+    padding: 2%;
+
+    // display: none;
+}
+
+#div-btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+#div-notif {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        display: inline-block;
+        margin: 2%;
+    }
+}
+
+#div-logout {
+}
+
+#sec-connection, #sec-registration {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 5% auto;
+
+    border-radius: 2%;
+
+    @extend %shaded-box;
+    background: #4b475b38;
+
+}

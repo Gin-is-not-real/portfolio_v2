@@ -3,9 +3,6 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="../../style/variables.css" rel="stylesheet">
-        <link href="../../style/title.css" rel="stylesheet">
-        <link href="../../style/accounts.css" rel="stylesheet">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');   
         </style> 
@@ -42,14 +39,6 @@
 
         <hr>
         <?php include('parts/footer.php'); ?>
-        
-        <!-- <script src="./scripts/effects.js"></script>
-        <script src="./scripts/events.js"></script>
-        <script src="./scripts/admin_interface.js"></script> -->
-
-        <script src="../js/script.js"></script>
-        <script src="../js/accounts.js"></script>
-    
     </body>
 
 </html>

@@ -1,3 +1,7 @@
+/*
+    gestion des events d'aministration des projets
+*/
+
 let btn_add = document.querySelector('#btn-add');
 btn_add.targetedSubmit = document.querySelector('#sub-add');
 

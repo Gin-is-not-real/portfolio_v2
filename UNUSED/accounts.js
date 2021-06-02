@@ -1,13 +1,4 @@
-console.log("bonjour");
-
 const main_accounts = document.getElementById("main-accounts");
-
-// const btn_admin_on = document.getElementById("btn-admin-mode");
-// btn_admin_on.targetSection = document.getElementById("notice");
-// btn_admin_on.addEventListener("click", function() {
-//     let display = this.targetSection.style.display;
-//     this.targetSection.style.display = display == "none" ? "flex" : "none";
-// })
 
 const btn_deconnection = document.getElementById("btn-deconnection");
 

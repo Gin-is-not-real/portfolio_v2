@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,900&display=swap");
-#skills-content, section:not(#skills-section) {
+#skills-content, article section:not(#skills-section, #main-accounts section), #sec-connection, #sec-registration, #main-login {
   box-shadow: 4px 3px 10px rgba(70, 70, 70, 0.597);
   background: #49576d44;
 }
@@ -355,6 +355,76 @@ section p {
   width: 50%;
   justify-content: space-evenly;
 }
+#main-login {
+  width: 60%;
+  margin: 2% auto;
+  border-radius: 1%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #49576d44;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main-login * {
+  text-align: center;
+}
+#main-login > header {
+  padding: 2%;
+  margin: 0 auto 5% auto;
+  background: #4b475b38;
+}
+#main-login form {
+  width: 100%;
+  padding: 2%;
+  margin: 2% auto;
+}
+#main-login form input {
+  width: 80%;
+}
+#main-login form tr {
+  margin: 2% auto;
+}
+#main-login > div {
+  width: 100%;
+  padding: 2%;
+  margin: 0 auto;
+}
+#main-login input, #main-login h3 {
+  margin: 2%;
+}
+#main-login input[type=submit], #main-login input[type=button] {
+  margin: 5% auto;
+  padding: 2%;
+}
+
+#div-error {
+  color: #491923;
+  padding: 2%;
+}
+
+#div-btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+#div-notif {
+  display: flex;
+  flex-direction: column;
+}
+#div-notif a {
+  display: inline-block;
+  margin: 2%;
+}
+
+#sec-connection, #sec-registration {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 5% auto;
+  border-radius: 2%;
+  background: #4b475b38;
+}
+
 @keyframes upopacity {
   0% {
     opacity: 0;

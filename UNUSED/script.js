@@ -7,12 +7,12 @@
     let popYes = document.querySelector("#pop-add");
 
     let popNo = document.querySelector("#pop-cancel");
-    popNo.addEventListener("click", function() {
-        popupConfirm.style.visibility = "hidden";
-        popupConfirm.style.display = "none";
-        // popupsMain.style.display = "none";
-        // disableAllOthers(onEditId);
-    })
+    // popNo.addEventListener("click", function() {
+    //     popupConfirm.style.visibility = "hidden";
+    //     popupConfirm.style.display = "none";
+    //     // popupsMain.style.display = "none";
+    //     // disableAllOthers(onEditId);
+    // })
 
     /*
         When click on action button "X" on a line: 
