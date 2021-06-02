@@ -58,6 +58,16 @@ try {
             $opManager = new EntryManager();
             $affectedLines = $opManager->updateEntry($_GET['id']);
         }
+
+        elseif($_GET['action'] == 'select-img') {
+            $tmpName = $_FILES['file']['tmp_name'];
+            $name = $_FILES['file']['name'];
+
+            print_r($_FILES['file']);
+            echo $tmpName . './static/img/upload/' . $name;
+
+            move_uploaded_file($tmpName . './static/img/upload/' . $name);
+        }
     }
 
     goToAdminInterface();

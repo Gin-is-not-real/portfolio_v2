@@ -21,23 +21,29 @@
             <!-- <label for="project_link">LIEN PROJET</label> -->
             <input type="text" name="project_link" placeholder="Lien Projet"/>
 
-
             <input type="submit" id="sub-add" name="sub-add" value="sub-add" hidden/>
             <input type="button" id="btn-add" name="btn-add" value="Enregistrer" />
-
         </form>
         <!-- <input type="button" value="add" /> -->
     </div>
+
+    <div id="container-form-upload" >
+        <form action="accounts_index.php?action=select-img" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit"></input>
+        </form>
+    </div>
+    
+
+
 </div>
 
 <div class="main-admin" id="main-list">
-
         <header>
             <h3>liste des projets</h3>
         </header>
 
     <div id="container-form-list">
-
 <!-- LISTE -->
 <?php 
             $opManager = new EntryManager();
@@ -50,6 +56,13 @@
                         <input type="text" name="project_title" placeholder="Titre" maxlength="50" value="<?= $data['project_title']; ?>" disabled/>
                         <input type="text" name="project_describe" placeholder="Description" maxlength="255" value="<?= $data['project_describe']; ?>" disabled/>
                         <input type="text" name="project_image" placeholder="Image url" maxlength="255" value="<?= $data['project_image']; ?>" disabled/>
+
+                            <!-- <?php 
+                                if(isset($_FILES['file'])) {
+                                    $tmpName = $_FILES['file']['tmp_name'];
+                                }
+                            ?> -->
+
                         <input type="text" name="project_github" placeholder="Lien Github" value="<?= $data['project_github']; ?>" disabled/>
                         <input type="text" name="project_link" placeholder="Lien Projet" value="<?= $data['project_link']; ?>" disabled/>
 
