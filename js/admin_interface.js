@@ -1,8 +1,8 @@
 /*
     gestion des events liés aux comptes
 */
-
 const main_accounts = document.getElementById("main-accounts");
+
 const btn_deconnection = document.getElementById("btn-deconnection");
 
 const btn_home = document.getElementById("btn-home");

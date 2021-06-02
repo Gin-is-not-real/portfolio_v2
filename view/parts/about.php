@@ -9,7 +9,7 @@
     <!-- PRESENTATION -->
     <div class="div-article-main" id="about-main-container">
         <figure>
-            <img src="../static/img/essaiLogo.svg" alt="">
+            <img id="img-bg" src="../static/img/essaiLogo.svg" alt="">
         </figure>
 
         <section id="presentation-section">

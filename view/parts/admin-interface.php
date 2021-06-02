@@ -2,7 +2,7 @@
     require_once("model/EntryManager.php");
 ?>
 
-<div class="article-main" id="admin-main">
+<div class="main-admin" id="main-add">
 
 <!-- AJOUTER -->
     <div id="container-form-add">
@@ -28,7 +28,15 @@
         </form>
         <!-- <input type="button" value="add" /> -->
     </div>
+</div>
 
+<div class="main-admin" id="main-list">
+
+        <header>
+            <h3>liste des projets</h3>
+        </header>
+
+    <div id="container-form-list">
 
 <!-- LISTE -->
 <?php 
@@ -36,18 +44,19 @@
             $projects = $opManager->getEntries();
             while($data = $projects->fetch()) {
 ?>
-            <div id="container-form">
+            <div class="container-form">
                 <form class="form-list" id="form-line-<?=$data['project_id']; ?>" action="accounts_index.php?action=edit-project&amp;id=<?= $data['project_id']; ?>" method="post">
-                    <input type="text" name="project_title" placeholder="Titre" maxlength="50" value="<?= $data['project_title']; ?>" disabled/>
-                    <input type="text" name="project_describe" placeholder="Description" maxlength="255" value="<?= $data['project_describe']; ?>" disabled/>
-                    <input type="text" name="project_image" placeholder="Image url" maxlength="255" value="<?= $data['project_image']; ?>" disabled/>
-                    <input type="text" name="project_github" placeholder="Lien Github" value="<?= $data['project_github']; ?>" disabled/>
-                    <input type="text" name="project_link" placeholder="Lien Projet" value="<?= $data['project_link']; ?>" disabled/>
+                    <div>
+                        <input type="text" name="project_title" placeholder="Titre" maxlength="50" value="<?= $data['project_title']; ?>" disabled/>
+                        <input type="text" name="project_describe" placeholder="Description" maxlength="255" value="<?= $data['project_describe']; ?>" disabled/>
+                        <input type="text" name="project_image" placeholder="Image url" maxlength="255" value="<?= $data['project_image']; ?>" disabled/>
+                        <input type="text" name="project_github" placeholder="Lien Github" value="<?= $data['project_github']; ?>" disabled/>
+                        <input type="text" name="project_link" placeholder="Lien Projet" value="<?= $data['project_link']; ?>" disabled/>
 
-                    <input type="text" id="sum-message" name="sum_message" hidden/>
+                        <input type="text" id="sum-message" name="sum_message" hidden/>
 
-                    <input type="button" id="sub-edit-<?= $data['project_id'] ?>"  name="sub-edit" value="valider"  hidden/>
-
+                        <input type="button" id="sub-edit-<?= $data['project_id'] ?>"  name="sub-edit" value="valider"  hidden/>
+                    </div>
                 <div id="div-actions">
                     <form action="accounts_index.php?action=edit-project&amp;id=<?= $data['project_id'] ?>" method="post">
 
@@ -68,5 +77,5 @@
             }
             $projects->closeCursor();
         ?>
-
+    </div>
 </div>

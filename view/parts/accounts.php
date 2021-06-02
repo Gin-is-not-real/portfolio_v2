@@ -10,7 +10,8 @@ $btn_deconnect = '<a href="accounts_index.php?action=deconnection"><input class=
 $btns = array();
 ?>
 
-<div id="main-login">
+
+<div id="main-login"  class="admin-main">
     <header>
         <div id="div-notice">
             <?php 
@@ -33,13 +34,7 @@ $btns = array();
     ?>
         </div>
     
-        <div id="div-error">
-            <?php
-                if(isset($_POST['log-error'])) {
-                    echo  $_POST['log-error'] .'</br>';
-                }
-            ?>
-        </div>
+
     
         <div id="div-btns">
             <?php
@@ -77,6 +72,14 @@ $btns = array();
             ?>
         </div>
     </div>
+
+    <div id="div-error">
+            <?php
+                if(isset($_POST['log-error'])) {
+                    echo  $_POST['log-error'] .'</br>';
+                }
+            ?>
+        </div>
 </header>
 
 

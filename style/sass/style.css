@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,900&display=swap");
-#skills-content, article section:not(#skills-section, #main-accounts section), #sec-connection, #sec-registration, #main-login {
+#skills-content, article section:not(#skills-section, #main-accounts section), .container-form, #main-list, #container-form-add, #main-add, #sec-connection, #sec-registration, #main-login {
   box-shadow: 4px 3px 10px rgba(70, 70, 70, 0.597);
   background: #49576d44;
 }
@@ -357,6 +357,7 @@ section p {
 }
 #main-login {
   width: 60%;
+  min-width: 200px;
   margin: 2% auto;
   border-radius: 1%;
   overflow: hidden;
@@ -370,12 +371,13 @@ section p {
   text-align: center;
 }
 #main-login > header {
-  padding: 2%;
+  width: 100%;
+  padding: 3%;
   margin: 0 auto 5% auto;
   background: #4b475b38;
 }
 #main-login form {
-  width: 100%;
+  width: 90%;
   padding: 2%;
   margin: 2% auto;
 }
@@ -392,10 +394,6 @@ section p {
 }
 #main-login input, #main-login h3 {
   margin: 2%;
-}
-#main-login input[type=submit], #main-login input[type=button] {
-  margin: 5% auto;
-  padding: 2%;
 }
 
 #div-error {
@@ -418,11 +416,106 @@ section p {
 }
 
 #sec-connection, #sec-registration {
-  display: flex;
+  width: 80%;
+  display: none;
   flex-direction: column;
   margin: 0 auto 5% auto;
   border-radius: 2%;
   background: #4b475b38;
+}
+
+#main-add {
+  width: 60%;
+  min-width: 200px;
+  margin: 2% auto;
+  padding: 2%;
+  border-radius: 1%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #49576d44;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container-form-add {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  background: #4b475b38;
+}
+
+#form-add {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+#form-add input {
+  padding: 2%;
+  margin: 2%;
+}
+
+#main-list {
+  padding: 1%;
+  width: 90%;
+  margin: 0 auto;
+  background: #4b475b38;
+}
+#main-list h3 {
+  text-align: center;
+  margin: 2% auto;
+}
+
+#container-form-list {
+  width: 100%;
+  padding: 5%;
+  margin-bottom: 2%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.container-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+  background: #4b475b38;
+}
+.container-form * {
+  padding: 2%;
+  margin: 2%;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-list input {
+  width: 100%;
+}
+
+#div-actions {
+  display: flex;
+  flex-direction: column;
+}
+#div-actions form {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-main input[type=button], .admin-main input[type=submit] {
+  width: 100px;
+  margin: 5% auto;
+  margin: 5% auto;
+  padding: 2%;
+}
+
+input[id*=btn-suppr] {
+  width: 50px !important;
 }
 
 @keyframes upopacity {
@@ -669,6 +762,10 @@ span {
 }
 #header-general:hover {
   background-image: linear-gradient(rgba(128, 128, 128, 0.618), transparent);
+}
+
+#img-bg {
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */
