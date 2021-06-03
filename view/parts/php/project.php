@@ -1,8 +1,9 @@
 <?php 
-$img_folder_url = 'http://localhost/FORM_PROJETS/form_projet4_Portfolio_v2/static/img/';
+$img_folder_url = '/FORM_PROJETS/portfolio_v2/static/img/';
 ?>
 
 <section class="projet-section">
+
     <header>
         <h3><?= $data['project_title']; ?></h3>
         <p><?= $data['project_describe']; ?></p>
@@ -11,6 +12,7 @@ $img_folder_url = 'http://localhost/FORM_PROJETS/form_projet4_Portfolio_v2/stati
     <div class="section-main" id="projet-main-content">
         <div class="div-container-screen">
             <figure class="figure-screen">
+
                 <img class="img-screen ginfram-movingDemo-img vertical" src="<?= $img_folder_url . $data['project_image']; ?>">
             </figure>
         </div>

@@ -55,13 +55,22 @@
                     <div>
                         <input type="text" name="project_title" placeholder="Titre" maxlength="50" value="<?= $data['project_title']; ?>" disabled/>
                         <input type="text" name="project_describe" placeholder="Description" maxlength="255" value="<?= $data['project_describe']; ?>" disabled/>
+
+                        <input type="file" name="project_image" maxlength="255" value="">
                         <input type="text" name="project_image" placeholder="Image url" maxlength="255" value="<?= $data['project_image']; ?>" disabled/>
 
-                            <!-- <?php 
-                                if(isset($_FILES['file'])) {
-                                    $tmpName = $_FILES['file']['tmp_name'];
-                                }
-                            ?> -->
+                    <!-- <?php
+                        if(isset($_POST['img_name'])) {                         
+                    ?>
+                            <input type="text" name="project_image" placeholder="Image url" maxlength="255" value="<?= $_POST['img_name']; ?>" disabled/>
+                    <?php 
+                        }
+                        else {
+                    ?>
+                            <input type="text" name="project_image" placeholder="Image url" maxlength="255" value="<?= $data['project_image']; ?>" disabled/>
+                    <?php
+                        }
+                    ?> -->
 
                         <input type="text" name="project_github" placeholder="Lien Github" value="<?= $data['project_github']; ?>" disabled/>
                         <input type="text" name="project_link" placeholder="Lien Projet" value="<?= $data['project_link']; ?>" disabled/>

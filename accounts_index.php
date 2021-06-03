@@ -15,7 +15,7 @@ try {
                     session_destroy();
                 }
             }
-            echo session_id() .' ' . $_SESSION['pseudo'];
+            // echo session_id() .' ' . $_SESSION['pseudo'];
             //si il y une session ouverte, on la detruit
         }
         // goToAdminInterface();
@@ -62,11 +62,13 @@ try {
         elseif($_GET['action'] == 'select-img') {
             $tmpName = $_FILES['file']['tmp_name'];
             $name = $_FILES['file']['name'];
+            
+            $dest = 'static/img/upload/';
 
-            print_r($_FILES['file']);
-            echo $tmpName . './static/img/upload/' . $name;
-
-            move_uploaded_file($tmpName . './static/img/upload/' . $name);
+            // print_r($_FILES['file']);
+            // echo '<br/>tmp_name' . $tmpName . ', DEST: ' . $dest . $name . '<br/>';
+            move_uploaded_file($tmpName, $dest . $name);
+            $_POST['img_name'] = 'upload/' . $name;
         }
     }
 

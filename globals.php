@@ -1,8 +1,14 @@
 <?php
-$GLOBALS['servername'] = 'localhost';
+// $GLOBALS['hostname'] = 'promo-72.codeur.online';
+// $GLOBALS['username'] = 'ninap';
+// $GLOBALS['password']  = 'pXvu3qcH1Ry83Q==';
+// $GLOBALS['basename'] = 'ninap_bases';
+
+$GLOBALS['hostname'] = 'localhost';
 $GLOBALS['username'] = 'admin';
 $GLOBALS['password'] = 'admin';
 $GLOBALS['basename'] = 'portfolio';
+
 $GLOBALS['tablename'] = 'projects';
 $GLOBALS['log-tablename'] = 'log_gin_users';
 
