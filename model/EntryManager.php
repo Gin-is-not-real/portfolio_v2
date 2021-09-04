@@ -36,7 +36,6 @@ class EntryManager extends ConnectionManager {
     }
 
     public function getEntry($id) {
-
         $entry = $this->dbPDO->query("SELECT project_id, project_title, project_describe, project_image, project_github, project_link FROM $this->tablename  WHERE project_id =" . $id);
 
         return $entry;

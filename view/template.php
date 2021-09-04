@@ -19,7 +19,8 @@
 
             <main>
                 <?php 
-                    $img_folder_url = 'http://localhost/FORM_PROJETS/form_projet4_Portfolio_v2/static/img/';
+                    // $img_folder_url = 'http://localhost/FOLDERS/FORM_PROJETS/form_projet4_Portfolio_v2/static/img/';
+                    $img_folder_url = '../static/img/';
 
                     echo '<div class="container-ancre" ><a class="ancre" id="ancre-1"></a></div>' . '<br>';
                     include('parts/about.php');

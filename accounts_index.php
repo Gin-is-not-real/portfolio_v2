@@ -60,15 +60,22 @@ try {
         }
 
         elseif($_GET['action'] == 'select-img') {
+            //tmp_name: nom temporaire generé par php
+            //tmp_name: C:\Users\acs\AppData\Local\Temp\php1C94.tmp
             $tmpName = $_FILES['file']['tmp_name'];
+
+            //name: mix.png
             $name = $_FILES['file']['name'];
             
             $dest = 'static/img/upload/';
 
-            // print_r($_FILES['file']);
-            // echo '<br/>tmp_name' . $tmpName . ', DEST: ' . $dest . $name . '<br/>';
+            echo '<br/>file: ' . $_FILES['file'] .'<br/> tmp_name: ' . $tmpName . '<br/> DEST: ' . $dest . $name . '<br/>';
+
+            //deplace le file vers l'emplacement choisi dans le dossier du projet
             move_uploaded_file($tmpName, $dest . $name);
+
             $_POST['img_name'] = 'upload/' . $name;
+                        // print_r($_FILES['file']);
         }
     }
 

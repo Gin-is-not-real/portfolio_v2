@@ -2,8 +2,6 @@
 require_once('model/AccountManager.php');
 require_once('controller/frontController.php');
 
-
-
 // CONTROLLER
 if(session_id() == '') {
     session_start();

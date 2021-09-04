@@ -125,7 +125,7 @@
     box-sizing: border-box;
 
     background: $bg-pres-sec;
-    animation: surge-horizontal 5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;    //
+    animation: surge-horizontal 5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards infinite;    //
 }
 
 #skills-section {

@@ -1,6 +1,6 @@
 <?php
-// require_once('globals.php');
-require_once($_SERVER['DOCUMENT_ROOT'] . '/FORM_PROJETS/portfolio_v2/globals.php');
+require_once('../globals.php');
+// require_once($_SERVER['DOCUMENT_ROOT'] . '/portfolio_v2/globals.php');
 
 // $path = $_SERVER['DOCUMENT_ROOT'];
 

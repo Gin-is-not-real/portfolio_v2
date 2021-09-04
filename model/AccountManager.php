@@ -1,5 +1,6 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . '/FORM_PROJETS/portfolio_v2/globals.php');
+// require_once($_SERVER['DOCUMENT_ROOT'] . '/FOLDERS/FORM_PROJETS/portfolio_v2/globals.php');
+
 
 class AccountDatabaseManager {
     private $hostname;

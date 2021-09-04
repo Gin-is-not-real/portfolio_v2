@@ -1,5 +1,5 @@
 <?php 
-$img_folder_url = '/FORM_PROJETS/portfolio_v2/static/img/';
+$img_folder_url = '../static/img/';
 ?>
 
 <section class="projet-section">
